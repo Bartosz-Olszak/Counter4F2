@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Counter4F2.Views.AddCounterPage"
+             Title="AddCounterPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button WidthRequest="30"
+                            HeightRequest="30"
+                            BackgroundColor="Transparent"
+                            Clicked="BackBtn_Clicked"
+                            HorizontalOptions="Start"
+                            ImageSource="{FontImage FontFamily='OpenSansRegular', Color='White', Glyph='&lt;', Size=25}"
+                            Margin="10"/>
+                            
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout>
+
+                <VerticalStackLayout Margin="20">
+                    <Label Text="Counter name" 
+                           Margin="0, 5"/>
+                
+                    <Editor x:Name="CounterNameEditor"
+                            Placeholder="My Counter!"/>
+                </VerticalStackLayout>
+
+
+                <VerticalStackLayout Margin="20">
+                    <Label Text="Default count"
+                           Margin="0, 5"/>
+                    <Editor x:Name="DefaultCountEditor"
+                            Keyboard="Numeric"
+                            Placeholder="123"/>
+                </VerticalStackLayout>
+
+
+                <VerticalStackLayout Margin="20">
+
+                    <Label Text="Red"
+                            Margin="0, 5"/>
+
+                    <Editor x:Name="RedEditor"
+                            Text="0"
+                            HorizontalOptions="Start"
+                            WidthRequest="100"
+                            Keyboard="Numeric"
+                            Placeholder="123"
+                            TextChanged="RedEditor_TextChanged"/>
+
+                </VerticalStackLayout>
+
+
+                <VerticalStackLayout Margin="20">
+
+                    <Label Text="Green"
+                           Margin="0, 5"/>
+
+                    <Editor x:Name="GreenEditor"
+                            WidthRequest="100"
+                            HorizontalOptions="Start"
+                            Text="0"
+                            Keyboard="Numeric"
+                            Placeholder="123"
+                            TextChanged="GreenEditor_TextChanged"/>
+
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Margin="20">
+
+                    <Label Text="Blue"
+                           Margin="0, 5"/>
+
+                    <Editor x:Name="BlueEditor"
+                            Text="0"
+                            HorizontalOptions="Start"
+                            WidthRequest="100"
+                            Keyboard="Numeric"
+                            Placeholder="123"
+                            TextChanged="BlueEditor_TextChanged"/>
+
+                </VerticalStackLayout>
+
+
+
+
+
+                <Button x:Name="AddCounterBtn"
+                        Text="Add"
+                        Clicked="AddCounterBtn_Click"
+                        Margin="20"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Counter4F2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Counter4F2"
+    xmlns:views="clr-namespace:Counter4F2.Views"
+    Title="Counter4F2"
+    FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Title="Counters"
+        ContentTemplate="{DataTemplate views:AllCountersPage}"
+        Route="AllCoutersPage" />
+
+    <ShellContent
+        Title="Counter"
+        ContentTemplate="{DataTemplate views:CounterPage}"
+        Route="CouterPage" />
+
+    <ShellContent
+        Title="Add"
+        ContentTemplate="{DataTemplate views:AddCounterPage}"
+        Route="AddCounterPage" />
+
+</Shell>
